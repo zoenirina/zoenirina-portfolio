@@ -1,0 +1,99 @@
+@import "tailwindcss";
+@custom-variant dark (&:where(.dark, .dark *));
+
+@theme {
+  --breakpoint-3xl: 120rem;
+
+  /* ta nouvelle animation personnalisée */
+  --animate-spin-slow: spin-slow 20s linear infinite;
+--animate-marquee: scroll-left 20s linear infinite;
+  @keyframes spin-slow {
+    from {
+      transform: rotate(0deg);
+    }
+    to {
+      transform: rotate(360deg);
+    }
+  }
+
+  @keyframes scroll-left {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(-50%);
+    }
+  }
+
+  /* wiggle déjà défini */
+  --animate-wiggle: wiggle 1s ease-in-out infinite;
+  --animate-pulse-slow: pulse-slow 2s ease-in-out infinite;
+  @keyframes wiggle {
+    0%, 100% {
+      transform: rotate(-3deg);
+    }
+    50% {
+      transform: rotate(3deg);
+    }
+  }
+
+@keyframes pulse-slow {
+  0% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: translate(-50%, -50%) scale(1.05);
+    opacity: 0.35;
+  }
+  100% {
+    transform: translate(-50%, -50%) scale(1);
+    opacity: 0.2;
+  }
+}
+
+        @keyframes twinkle {
+          0%, 100% { opacity: 0.75; }
+          50% { opacity: 0.2; }
+        }
+}
+
+.bg-primary{
+  background-color: #09090b;
+}
+
+.bg-primary, .bg-background, .dark .bg-primary{
+  background-color: #09090b;
+}
+.grid-background {
+ --s: 100px;  
+  --n: 4;     
+  --t: 2px; 
+  --g: 10px;
+  
+  --c:#c5c5c5 25%,#cbcbcb00 0;
+  background: 
+    conic-gradient(at var(--g) var(--t),var(--c))
+     calc((var(--s)/var(--n) - var(--g) + var(--t))/2) 0/
+     calc(var(--s)/var(--n)) var(--s),
+    conic-gradient(from 180deg at var(--t) var(--g),var(--c))
+     0 calc((var(--s)/var(--n) - var(--g) + var(--t))/2)/
+     var(--s) calc(var(--s)/var(--n));
+   
+}
+
+.dark .grid-background {
+    --s: 100px;  /* control the size of the grid */
+  --n: 4;      /* control the granularity */
+  --t: 2px;    /* the thickness */
+  --g: 10px;   /* the gap between dashes */
+  
+  --c:#291431c6 25%,#cbcbcb00 0;
+  background: 
+    conic-gradient(at var(--g) var(--t),var(--c))
+     calc((var(--s)/var(--n) - var(--g) + var(--t))/2) 0/
+     calc(var(--s)/var(--n)) var(--s),
+    conic-gradient(from 180deg at var(--t) var(--g),var(--c))
+     0 calc((var(--s)/var(--n) - var(--g) + var(--t))/2)/
+     var(--s) calc(var(--s)/var(--n));
+}

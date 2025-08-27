@@ -1,0 +1,35 @@
+export const workData = [
+  {
+    id: 1,
+    title: "Glassmorphic Navbar",
+    tags: ["html", "programming", "tailwind"],
+    description: "Build a Glassmorphic Navbar with TailwindCSS backdrop-filter & backdrop-blur.",
+    date: "April 22, 2021 (4y ago)",
+    readTime: "5 min read",
+    reads: 10404,
+    image: "/work01.jpg",
+    theme: "dark", // ou "light"
+  },
+  {
+    id: 2,
+    title: "Expense Tracker",
+    tags: ["react", "node", "mongodb"],
+    description: "A scalable expense tracker app with authentication and analytics.",
+    date: "Jan 10, 2024",
+    readTime: "7 min read",
+    reads: 8500,
+    image: "/work03.jpg",
+    theme: "light",
+  },
+    {
+    id: 3,
+    title: "Expense Tracker",
+    tags: ["react", "node", "mongodb"],
+    description: "A scalable expense tracker app with authentication and analytics.",
+    date: "Jan 10, 2024",
+    readTime: "7 min read",
+    reads: 8500,
+    image: "/work03.jpg",
+    theme: "light",
+  },
+];
