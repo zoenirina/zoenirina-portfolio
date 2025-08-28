@@ -24,16 +24,16 @@ export default function Service() {
     <div className=" min-h-screen">
 
  <div
-  className="mx-auto w-full max-w-lg relative flex flex-col items-center justify-center text-center overflow-visible"
+  className="mx-auto max-w-7xl relative flex flex-col items-center justify-center text-center overflow-visible"
 >
-  <h3 className="text-5xl leading-normal font-bold mb-3 text-gray-900 dark:text-white">
-    Get Started Now
+  <h3 className="text-4xl md:text-5xl leading-normal font-bold mb-3 text-gray-900 dark:text-white">
+    Ce que je peux vous offrir
   </h3>
 
 <SeparatorLine />
 
-  <p className="mt-6 text-sm text-gray-600 dark:text-gray-300">
-    Be part of millions of people around the world using modern User Interfaces.
+  <p className="mt-6 text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+   Des solutions personnalisées en développement web, design et intégration, pour transformer vos idées en projets concrets et performants.
   </p>
 </div>
 

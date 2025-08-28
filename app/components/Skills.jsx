@@ -5,27 +5,12 @@ import SeparatorLine from "./ui/SeparatorLine";
 
 export const Skills = () => {
   return (
-    <div className=" dark:bg-[#09090b]/50 bg-[#eee]  mx-6 rounded-lg border border-gray-300 dark:border-fuchsia-900/20 backdrop-blur-md
-      flex flex-col items-center justify-start min-h-screen py-16 pb-56 px-8 lg:px-24 relative
+    <div className="   mx-6 rounded-lg   backdrop-blur-md
+      flex flex-col items-center justify-start  py-16 px-8 lg:px-24 relative
        text-gray-800
        dark:text-gray-100 overflow-hidden
     ">
-      {/* {[2000, 1500, 1000, 800, 700, 600, 500, 400, 300, 200, 100].map((size, index, arr) => {
-  return (
-    <div
-      key={index}
-      className="absolute top-0 left-0 -translate-x-1/2 -translate-y-1/2 rounded-full"
-      style={{
-        width: `${size}px`,
-        height: `${size}px`,
-        background: 'rgba(142,81,255,0.1)',
-        opacity: 0.1 + index * 0.05,
-        animationDelay: `${index * 100}ms`,
-      }}
-    />
-  );
-})} */}
-  {[2000, 1500, 1000, 800, 700, 500, 300, 200, 100].map((size, index) => (
+  {[2000, 1500, 300, 100].map((size, index) => (
   <div
     key={index}
     className="absolute bottom-0 right-0 translate-x-1/2 translate-y-1/2 rounded-full z-2"
@@ -46,14 +31,13 @@ export const Skills = () => {
           className="size-24 mx-auto text-gray-700 dark:text-gray-200"
           xmlns="http://www.w3.org/2000/svg"
         >
-          {/* ton svg */}
         </svg>
 
         <h1 className="
           text-4xl lg:text-5xl font-bold mb-4
           text-gray-800 dark:text-gray-100
         ">
-          A data security solution that works
+          Les technologies que je maîtrise
         </h1>
 
  <SeparatorLine></SeparatorLine>
@@ -61,7 +45,7 @@ export const Skills = () => {
           text-lg lg:w-2/3 mx-auto
           text-gray-600 dark:text-gray-300
         ">
-          Metomic's API connectors allow you to integrate your most high-risk SaaS apps quickly and agent-free, making it easy to add Metomic's data security tool to your tech stack.
+          Un éventail complet d’outils et de langages pour développer des applications robustes, évolutives et innovantes.
         </p>
       </div>
 
