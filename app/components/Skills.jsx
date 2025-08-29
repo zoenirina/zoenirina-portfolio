@@ -1,7 +1,10 @@
+'use client';
+
 import Image from "next/image";
 import { skillsImage } from "../data/skill-image";
 import { skillsData } from "../data/skills";
 import SeparatorLine from "./ui/SeparatorLine";
+import { motion } from "framer-motion";
 
 export const Skills = () => {
   return (
@@ -52,10 +55,10 @@ export const Skills = () => {
       <div className="relative w-full max-w-xl lg:max-w-7xl py-8 flex justify-center items-center mb-24 mt-32">
     
 
-
+<SkillsPyramid></SkillsPyramid>
 
   
-      <div className="flex flex-col items-center gap-4 max-w-4xl mx-auto">
+      {/* <div className="flex flex-col items-center gap-4 max-w-4xl mx-auto">
   {(() => {
     const rows = [];
     let count = skillsData.length;
@@ -95,7 +98,7 @@ export const Skills = () => {
 
     return rows;
   })()}
-</div>
+</div> */}
 
       {/* <div className="flex flex-wrap justify-center gap-2 max-w-4xl">
         {skillsData.map((skill, id) => (
@@ -148,6 +151,76 @@ export const Skills = () => {
 };
 
 
+const SkillsPyramid = () => {
+  return (
+    <div className="flex flex-col items-center gap-4 max-w-4xl mx-auto">
+      {(() => {
+        const rows = [];
+        let start = 0;
+        let rowSize = Math.ceil(skillsData.length / 4); // première ligne plus grande
+
+        while (start < skillsData.length) {
+          const rowItems = skillsData.slice(start, start + rowSize);
+
+          rows.push(
+            <div key={start} className="flex justify-center gap-2 flex-wrap">
+              {rowItems.map((skill, id) => (
+                <motion.div
+                  key={id}
+                  initial={{ opacity: 0, y: 20 }}
+                  whileInView={{ opacity: 1, y: 0 }}
+                  viewport={{ once: true }}
+                  transition={{ duration: 0.6, delay: (start + id) * 0.05 }}
+                >
+                  <CameraLensIcon>
+                  <div className="flex flex-col items-center justify-center gap-3 h-full">
+                    <div
+                      className="
+                        p-3 w-24 h-24 flex items-center justify-center rounded-md shadow-md border
+                        bg-white/60 backdrop-blur-md border-gray-200
+                        dark:bg-white/10 dark:border-gray-500/30
+                        hover:scale-105 transition-transform duration-200
+                      "
+                    >
+                      <img
+                        src={skillsImage(skill)?.src}
+                        alt={skill}
+                        width={36}
+                        height={36}
+                        className="h-full w-auto rounded-lg"
+                      />
+                    </div>
+                  </div>
+                </CameraLensIcon>
+                </motion.div>
+              ))}
+            </div>
+          );
+
+          start += rowSize;
+          rowSize = Math.max(rowSize - 1, 1); // réduire progressivement les éléments par ligne
+        }
+
+        return rows;
+      })()}
+    </div>
+  );
+};
+
+function CameraLensIcon({ children }) {
+  return (
+    <div className="relative p-1">
+      {children}
+      {/* traits dans les coins */}
+      <span className="absolute -top-0.5 -left-0.5 w-4 h-4 border-t-2 border-l-2 border-gray-300 dark:border-gray-500/30 rounded-tl-md"></span>
+      <span className="absolute -top-0.5 -right-0.5 w-4 h-4 border-t-2 border-r-2 border-gray-300 dark:border-gray-500/30 rounded-tr-md"></span>
+      <span className="absolute -bottom-0.5 -left-0.5 w-4 h-4 border-b-2 border-l-2 border-gray-300 dark:border-gray-500/30 rounded-bl-md"></span>
+      <span className="absolute -bottom-0.5 -right-0.5 w-4 h-4 border-b-2 border-r-2 border-gray-300 dark:border-gray-500/30 rounded-br-md"></span>
+    </div>
+  );
+}
+
+
  function RotatingDot({ size = 256, dotSize = 8, circleColor = "#d1d5db", dotColor = "#d1d5db" }) {
   const circleStyle = {
     width: size,
@@ -198,18 +271,7 @@ function CameraLens() {
   );
 }
 
-function CameraLensIcon({children}) {
-  return (
-    <div className="relative min-w-26 size-26  mx-6 ">
-{children}
-      {/* traits dans les coins */}
-      <span className="absolute -top-0.5 -left-0.5 size-4 min-w-4 border-t-2 border-l-2 border-gray-300 dark:border-gray-500/30 rounded-tl-md"></span>
-      <span className="absolute -top-0.5 -right-0.5 size-4 min-w-4 border-t-2 border-r-2 border-gray-300 dark:border-gray-500/30 rounded-tr-md"></span>
-      <span className="absolute -bottom-0.5 -left-0.5 size-4 min-w-4 border-b-2 border-l-2 border-gray-300 dark:border-gray-500/30 rounded-bl-md"></span>
-      <span className="absolute -bottom-0.5 -right-0.5 size-4 min-w-4 border-b-2 border-r-2 border-gray-300 dark:border-gray-500/30 rounded-br-md"></span>
-    </div>
-  );
-}
+
 
 function CustomMarquee({ children, speed = 30 }) {
   return (
