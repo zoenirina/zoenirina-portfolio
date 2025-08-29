@@ -54,9 +54,73 @@ export const Skills = () => {
 
 
 
+  
+      <div className="flex flex-col items-center gap-4 max-w-4xl mx-auto">
+  {(() => {
+    const rows = [];
+    let count = skillsData.length;
+    let start = 0;
+    let rowSize = Math.ceil(count / 4); // taille de la première ligne (peut ajuster)
 
+    while (start < skillsData.length) {
+      const rowItems = skillsData.slice(start, start + rowSize);
+      rows.push(
+        <div key={start} className="flex justify-center gap-2">
+          {rowItems.map((skill, id) => (
+            <CameraLensIcon key={id}>
+              <div className="flex flex-col items-center justify-center gap-3 h-full">
+                <div className="
+                  p-3 w-24 h-24 flex items-center justify-center rounded-md shadow-md border
+                  bg-white/60 backdrop-blur-md border-gray-200
+                  dark:bg-white/10 dark:border-gray-500/30
+                  hover:scale-105 transition-transform duration-200
+                ">
+                  <img
+                    src={skillsImage(skill)?.src}
+                    alt={skill}
+                    width={36}
+                    height={36}
+                    className="h-full w-auto rounded-lg"
+                  />
+                </div>
+              </div>
+            </CameraLensIcon>
+          ))}
+        </div>
+      );
 
-        <CustomMarquee>
+      start += rowSize;
+      rowSize = Math.max(rowSize - 1, 1); // réduire le nombre d'éléments par ligne
+    }
+
+    return rows;
+  })()}
+</div>
+
+      {/* <div className="flex flex-wrap justify-center gap-2 max-w-4xl">
+        {skillsData.map((skill, id) => (
+          <CameraLensIcon key={id}>
+            <div className="flex flex-col items-center justify-center gap-3 h-full">
+              <div className="
+                p-3 w-24 h-24 flex items-center justify-center rounded-md shadow-md border
+                bg-white/60 backdrop-blur-md border-gray-200
+                dark:bg-white/10 dark:border-gray-500/30
+                hover:scale-105 transition-transform duration-200
+              ">
+                <img
+                  src={skillsImage(skill)?.src}
+                  alt={skill}
+                  width={36}
+                  height={36}
+                  className="h-full w-auto rounded-lg"
+                />
+              </div>
+            </div>
+          </CameraLensIcon>
+        ))}
+      </div> */}
+
+        {/* <CustomMarquee>
           {skillsData.map((skill, id) => (
             <CameraLensIcon key={id}>
               <div className="flex flex-col items-center justify-center gap-3 h-full">
@@ -76,7 +140,7 @@ export const Skills = () => {
               </div>
             </CameraLensIcon>
           ))}
-        </CustomMarquee>
+        </CustomMarquee> */}
       </div>
 
     </div>
