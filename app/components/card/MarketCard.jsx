@@ -49,7 +49,7 @@ const MarketCard = ({
         <div className="absolute left-[8%] top-0 h-full w-0.5 bg-white opacity-30 z-0" style={{ borderLeft: '2px dashed currentColor', transform: 'translateX(-50%)' }}></div>
         <div className="absolute right-[8%] top-0 h-full w-0.5 bg-white opacity-30 z-0" style={{ borderLeft: '2px dashed currentColor', transform: 'translateX(-50%)' }}></div>
       </div>
-      <div className="flex-1 bg-white/20 dark:bg-[#09090b]/50 backdrop-blur-sm p-8 lg:p-16 flex flex-col justify-center text-white lg:w-1/2">
+      <div className="flex-1 bg-white/20 dark:bg-[#09090b]/90 backdrop-blur-sm p-8 lg:p-16 flex flex-col justify-center text-white lg:w-1/2">
 <span 
   className="font-sans text-5xl font-bold absolute right-4 top-4 
              text-slate-700 dark:text-slate-300
@@ -58,7 +58,7 @@ const MarketCard = ({
     textShadow: '2px 2px 4px rgba(0,0,0,0.1)',
   }}
 >
-  <span className="text-lg font-medium">Projet</span>
+  <span className="text-lg font-medium"></span>
   <span className="text-4xl font-bold ml-2">0{id}</span>
 </span>
 

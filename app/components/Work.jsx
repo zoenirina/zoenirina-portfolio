@@ -76,7 +76,7 @@ const Work = () => {
           </p>         
         </div>
         <div className="pt-24">
-          <div className="gap-6 flex flex-col">         
+          <div className="gap-16 flex flex-col">         
          {workData.map((project, index) => {
             const topInPx = (index + 6) * 20;
             const topInRem = topInPx / 16; 
