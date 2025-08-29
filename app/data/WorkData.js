@@ -8,7 +8,7 @@ export const workData = [
     date: "Juin 2025 - Présent",
     readTime: "8 min read",
     reads: 1200,
-    image: "tatitra.png", // à remplacer par tatitra.jpg si tu as l'image
+    image: ["tatitra.png","tatitra.png"], // à remplacer par tatitra.jpg si tu as l'image
     theme: "dark",
   },
   {
@@ -20,7 +20,7 @@ export const workData = [
     date: "Sept 2024 - Déc 2024",
     readTime: "7 min read",
     reads: 950,
-    image: "mira.png", // à remplacer par mira.jpg
+    image: ["mira.png","mira.png"], // à remplacer par mira.jpg
     theme: "light",
   },
   {
@@ -32,7 +32,7 @@ export const workData = [
     date: "Août 2024 - Oct 2024",
     readTime: "6 min read",
     reads: 800,
-    image: "soro.png", // à remplacer par soro.jpg
+    image: ["soro.png","soro.png"], // à remplacer par soro.jpg
     theme: "dark",
   },
 // Projet e-commerce
@@ -45,7 +45,7 @@ export const workData = [
   date: "Août 2023 - Oct 2023",
   readTime: "5 min read",
   reads: 600,
-  image: "ecommerce.png",
+  image: ["ecommerce.png","ecommerce.png"],
   theme: "light",
 },
 
@@ -58,7 +58,7 @@ export const workData = [
   date: "Novembre 2023 - Janvier 2024",
   readTime: "6 min read",
   reads: 450,
-  image: "podcast.png",
+  image: ["podcast04.png","podcast04.png"],
   theme: "light",
 }
 

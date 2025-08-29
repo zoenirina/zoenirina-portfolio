@@ -37,7 +37,7 @@ const projects = [
     description:
       'Système de gestion de rendez-vous et de réservations avec calendrier intelligent et optimisation tarifaire. Permet la prise de rendez-vous, la gestion des réservations et la planification.',
     tech: ['ReactJS', 'Laravel', 'Material UI'],
-    image: 'podcast.png', ///soro.jpg',
+    image: 'podcast02.png', ///soro.jpg',
     live: '',
     code: '',
   },

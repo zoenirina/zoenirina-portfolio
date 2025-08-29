@@ -1,4 +1,5 @@
-import React from 'react';
+import React, {useState} from 'react';
+import CarouselModal from '../CarouselModal';
 
 const MarketCard = ({
     id,
@@ -11,15 +12,23 @@ const MarketCard = ({
     image,
     stickyValue=20
 }) => {
+  const [isOpenModal, setIsOpenModal] = useState(false)
+
   return (
     <div className={`sticky flex flex-col lg:flex-row min-h-[600px] rounded-sm border border-gray-300 dark:border-fuchsia-900/20 overflow-hidden`}
     style={{ top: `${stickyValue}rem` }}
     >
       <div className="relative  flex-1  p-8 flex flex-col items-center justify-center text-white lg:w-1/2 object-cover bg-cover "
+      onClick={() => {
+        if (image && image.length > 0) {
+          // Open modal with the first image
+          setIsOpenModal(image[0]);
+        }
+      }}
       style={
-        image
+        image && image.length > 0
             ? {
-                    backgroundImage: `linear-gradient(to top, #0f0d1a7a 0%, #0f0d1a7a 90%, transparent 125%), url('${image}')`,
+                    backgroundImage: `linear-gradient(to top, #0f0d1a7a 0%, #0f0d1a7a 90%, transparent 125%), url('${image[0]}')`,
                 }
             : undefined
         }
@@ -40,7 +49,6 @@ const MarketCard = ({
           </div>
         </div>
 
-        {/* <div className="absolute top-1/2 left-0 w-full h-0.5 bg-white opacity-30 z-0" style={{ borderTop: '2px dashed currentColor', transform: 'translateY(-50%)' }}></div> */}
         <div className="absolute top-[12%] left-0 w-full h-0.5 bg-white opacity-30 z-0" style={{ borderTop: '2px dashed currentColor', transform: 'translateY(-50%)' }}></div>
         <div className="absolute bottom-[12%] left-0 w-full h-0.5 bg-white opacity-30 z-0" style={{ borderTop: '2px dashed currentColor', transform: 'translateY(-50%)' }}></div>
 
@@ -96,7 +104,7 @@ const MarketCard = ({
                                 </svg>
                                 <p>{date}</p>
                             </div>
-                            <div className="flex items-center gap-1.5 text-xs">
+                            {/* <div className="flex items-center gap-1.5 text-xs">
                                 <svg className="hidden h-5 w-5 text-slate-300 md:block" viewBox="0 0 24 24" fill="none">
                                     <path d="M5.75 4.75H18.25M6.75 4.75H17.25V6C17.25 8.89949 14.8995 11.25 12 11.25C9.10051 11.25 6.75 8.8995 6.75 6V4.75Z" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
                                     <path d="M9 10H15" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" strokeLinejoin="round"></path>
@@ -110,11 +118,12 @@ const MarketCard = ({
                                     <circle cx="12" cy="12" r="2.25" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round" strokeWidth="1.5"></circle>
                                 </svg>
                                 <span className="text-xs">{reads} reads</span>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                
       </div>
+      <CarouselModal isOpen={isOpenModal} onClose={() => setIsOpenModal(false)} images={image} />
     </div>
   );
 };
