@@ -21,7 +21,7 @@ export default function Service() {
 
  function ServicesSection() {
   return (
-    <div className=" min-h-screen">
+    <div className=" min-h-screen" id="services">
 
  <div
   className="mx-auto max-w-7xl relative flex flex-col items-center justify-center text-center overflow-visible"

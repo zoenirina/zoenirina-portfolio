@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <section className="pt-32 pb-20 px-6 relative z-20">
+    <section className="pt-50 pb-20 px-6 relative z-20 min-h-screen">
        <div style={{
           width: "450px",
           top: "550px",
@@ -40,7 +40,7 @@ export const Hero = () => {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
           >
             <a
-              href="https://drive.google.com/file/d/1rk5qMkHnK8VbF5THtTCyqd1La1kMtQWk/view?usp=drive_link"
+              href="https://drive.google.com/file/d/1moYCZjrSwDNyqaAQOQ220yJ-P5nkZCuO/view?usp=sharing"
               className="relative px-8 py-4 rounded-lg transition-all duration-200 font-medium text-sm bg-purple-300 hover:bg-purple-400 text-slate-900 shadow-sm text-base"
               target="_blank"
             >
@@ -68,9 +68,7 @@ export const Hero = () => {
         { label: 'Backend', icon: 'lucide-database' },
         { label: 'Design UI/UX', icon: 'lucide-palette' },
         { label: 'Full-Stack', icon: 'lucide-globe' },
-        { label: 'DevOps', icon: 'lucide-server-cog' },
         { label: 'Database', icon: 'lucide-table' },
-        { label: 'Cloud', icon: 'lucide-cloud' },
         { label: 'Collaboration', icon: 'lucide-users' },
       ].map((item, index) => (
         <motion.div
@@ -80,9 +78,9 @@ export const Hero = () => {
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.5 + index * 0.15 }}
         >
-          <div className="text-slate-600 dark:text-purple-400">
+          {/* <div className="text-slate-600 dark:text-purple-400">
             <i className={`lucide ${item.icon} w-5 h-5`} />
-          </div>
+          </div> */}
           <span className="text-sm font-medium text-slate-700 dark:text-slate-300">
             {item.label}
           </span>

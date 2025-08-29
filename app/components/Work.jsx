@@ -57,7 +57,7 @@ const projects = [
 
 const Work = () => {
   return (
-    <section id="work" className="py-20 px-6  relative">
+    <section id="projets" className="py-20 px-6  relative">
       <div 
         style={{
             width: "450px",

@@ -57,6 +57,9 @@
           50% { opacity: 0.2; }
         }
 }
+body{
+  scroll-behavior: smooth;
+}
 
 .bg-primary{
   background-color: #09090b;

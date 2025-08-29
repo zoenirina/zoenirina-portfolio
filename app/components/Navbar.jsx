@@ -9,7 +9,7 @@ const Navbar = () => {
   const fadeInRight = { initial: { opacity: 0, x: 20 }, animate: { opacity: 1, x: 0 }, transition: { duration: 0.6 } };
   const fadeInUp = { initial: { opacity: 0, y: -20 }, animate: { opacity: 1, y: 0 }, transition: { duration: 0.6 } };
 
-  const navItems = ['Services', 'Projets', 'Contact'];
+  const navItems = ['Services','Compétences', 'Projets', 'Contact'];
 
   // hook scroll
   const { scrollYProgress } = useScroll();
@@ -41,16 +41,23 @@ const Navbar = () => {
                 transition={{ duration: 0.4, delay: 0.1 * i }}
                 variants={fadeInUp}
               >
-                <a
-                  href={`#${label.toLowerCase()}`}
-                  className="text-sm tracking-wide font-medium text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
+                <button
+                  onClick={(e) => {
+                    e.preventDefault();
+                    const target = document.getElementById(label.toLowerCase());
+                    if (target) {
+                      target.scrollIntoView({ behavior: "smooth", block: "start" });
+                    }
+                  }}
+                  className="cursor-pointer text-sm tracking-wide font-medium text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
                   data-magnetic="true"
                 >
                   {label}
-                </a>
+                </button>
               </motion.li>
             ))}
           </ul>
+
           <motion.div {...fadeInRight}>
             <ThemeSwitch />
           </motion.div>

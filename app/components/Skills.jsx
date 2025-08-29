@@ -5,7 +5,7 @@ import SeparatorLine from "./ui/SeparatorLine";
 
 export const Skills = () => {
   return (
-    <div className="   mx-6 rounded-lg   backdrop-blur-md
+    <div id="compétences" className="   mx-6 rounded-lg   backdrop-blur-md
       flex flex-col items-center justify-start  py-16 px-8 lg:px-24 relative
        text-gray-800
        dark:text-gray-100 overflow-hidden
