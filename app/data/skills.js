@@ -19,6 +19,7 @@ export const skillsData = [
   'Tailwind',
   'Bootstrap',
   'MaterialUI',
+  'npm2',
 
   // Bases de données
   'MongoDB',

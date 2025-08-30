@@ -5,7 +5,7 @@ import { motion } from 'framer-motion';
 
 export const Hero = () => {
   return (
-    <section className="pt-50 pb-20 px-6 relative z-20 min-h-screen">
+    <section id='accueil' className="pt-50 pb-20 px-6 relative z-20 min-h-screen">
        <div style={{
           width: "450px",
           top: "550px",
@@ -44,12 +44,12 @@ export const Hero = () => {
               className="relative px-8 py-4 rounded-lg transition-all duration-200 font-medium text-sm bg-purple-300 hover:bg-purple-400 text-slate-900 shadow-sm text-base"
               target="_blank"
             >
-              <span className="relative z-10 flex items-center gap-2">Voir Mon CV</span>
+              <span className="relative z-10 flex items-center gap-2">Télécharger Mon CV</span>
             </a>
 
             <a
               href="#contact"
-              className="relative px-8 py-4 rounded-lg transition-all duration-200 font-medium text-sm border border-slate-300 dark:border-slate-600 hover:bg-slate-50 dark:hover:bg-slate-800 text-slate-900 dark:text-slate-100 text-base"
+              className="relative px-8 py-4 rounded-lg transition-all duration-200 font-medium text-sm border border-purple-400 dark:border-purple-300 hover:bg-slate-50 dark:hover:bg-slate-800 text-purple-400 dark:text-purple-300 text-base"
             >
               <span className="relative z-10 flex items-center gap-2">Me Contacter</span>
             </a>

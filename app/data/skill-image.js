@@ -82,8 +82,14 @@ import kubernetes from '../assets/svg/skills/kubernetes.svg'
 import linux from '../assets/svg/skills/linux.svg'
 import sqlalchemy from '../assets/svg/skills/sqlalchemy.svg'
 import fastapi from '../assets/svg/skills/fastapi.svg'
-
-
+import springboot from '../assets/svg/skills/springboot.svg'
+import framermotion from '../assets/svg/skills/framermotion.svg'
+import laravel from '../assets/svg/skills/laravel.svg'
+import redux from '../assets/svg/skills/redux.svg'
+import oracle from '../assets/svg/skills/oracle.svg'
+import github from '../assets/svg/skills/github.svg';
+import gitlab from '../assets/svg/skills/gitlab.svg';
+import npm2 from '../assets/svg/skills/npm2.svg';
 
 export const skillsImage = (skill) => {
   const skillID = skill.toLowerCase();
@@ -254,6 +260,22 @@ export const skillsImage = (skill) => {
       return sqlalchemy;
     case 'fastapi':
       return fastapi;
+    case 'spring boot':
+      return springboot;
+    case 'framer motion':
+      return framermotion;
+    case 'laravel':
+      return laravel;
+    case 'redux':
+      return redux;
+    case 'oracle':
+      return oracle;
+    case 'github':
+      return github;
+    case 'gitlab':
+      return gitlab;
+    case 'npm2':
+      return npm2;
     default:
       break;
   }

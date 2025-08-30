@@ -39,7 +39,7 @@ export default function Service() {
 
     <div className="md:mt-8 mt-6 grid grid-cols-1  gap-2 md:gap-4 md:grid-col-2 lg:grid-cols-3 p-0 md:p-8 space-y-8 lg:space-y-0 lg:space-x-8">
 
-{servicesData.map((service, index) => (
+          {servicesData.map((service, index) => (
             <ServiceCard
               key={index}
               icon={service.icon}
