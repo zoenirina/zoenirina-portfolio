@@ -107,8 +107,8 @@ const Navbar = () => {
         <div className="max-w-6xl mx-auto px-6 py-4 flex justify-between items-center">
           <motion.div {...fadeInLeft}>
              <div className="text-2xl font-bold mb-4">
-              <span className="text-fuchsia-500">Zoenirina</span>
-              <span className="text-white"> M V</span>
+              <span className="text-fuchsia-500">Z. </span>
+              <span className="text-white">Marie Viviane</span>
             </div>
             {/* <h1 className="text-lg font-bold text-slate-900 dark:text-slate-100 boujee-text">
               Bonjour !

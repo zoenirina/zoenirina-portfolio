@@ -27,7 +27,7 @@ export const Skills = () => {
   />
 ))}
 
-      <div className="text-center mb-12">
+      <div className="text-center">
         <svg
           viewBox="0 0 147 148"
           fill="currentColor"
