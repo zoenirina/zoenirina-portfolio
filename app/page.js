@@ -6,6 +6,7 @@ import { Hero } from './components/Hero';
 import Service from './components/Services';
 import { Skills } from './components/Skills';
 import Navbar from './components/Navbar';
+import Footer from './components/Footer';
 
 export default function Home() {
   return (
@@ -31,6 +32,7 @@ export default function Home() {
         <Skills />
         <Work />
         <Contact />
+        <Footer />
       </div>
     </main>
   );
