@@ -1,18 +1,29 @@
 export const workData = [
   {
-    id: 1,
+  "id": 1,
+  "title": "SMART ATTENDANCE",
+  "tags": ["React", "Laravel", "Face Recognition", "TensorFlow", "Tailwind CSS"],
+  "description": "Application intelligente de pointage des étudiants via reconnaissance faciale, permettant l’enregistrement automatique des présences et absences, la gestion des classes et séances, le suivi en temps réel, ainsi que la génération d’historique et de rapports.",
+  "date": "Janvier 2026 - Présent",
+  "readTime": "5 min read",
+  "reads": 850,
+  "image": ["attendance.png"],
+  "theme": "light"
+},
+  {
+    id: 2,
     title: "TATITRA",
     tags: ["React Native", "Spring Boot", "Docker", "Tailwind CSS"],
     description:
       "Application mobile de gestion de flotte (véhicules, chauffeurs, dépenses, activités, rappels). Permet la gestion des véhicules et chauffeurs, le suivi des dépenses et versements ainsi que l’historique des activités.",
-    date: "Juin 2025 - Présent",
+    date: "Août 2025 - Présent",
     readTime: "8 min read",
     reads: 1200,
     image: ["tatitra.png","tatitra.png"], // à remplacer par tatitra.jpg si tu as l'image
     theme: "dark",
   },
   {
-    id: 2,
+    id: 3,
     title: "MIRA – Plateforme Carrière & Formation",
     tags: ["ReactJS", "Laravel", "Tailwind CSS"],
     description:
@@ -24,7 +35,7 @@ export const workData = [
     theme: "light",
   },
   {
-    id: 3,
+    id: 4,
     title: "SORO Rendez-Vous",
     tags: ["ReactJS", "Laravel", "Material UI"],
     description:
@@ -37,7 +48,7 @@ export const workData = [
   },
 // Projet e-commerce
 {
-  id: 4,
+  id: 5,
   title: "E-Commerce – Boutique en ligne",
   tags: ["Angular", "Spring Boot", "Tailwind CSS"],
   description:
@@ -50,7 +61,7 @@ export const workData = [
 },
 
 {
-  id: 5,
+  id: 6,
   title: "Podcast Malagasy – Récits et Œuvres",
   tags: ["Angular", "Spring Boot", "Tailwind CSS"],
   description:

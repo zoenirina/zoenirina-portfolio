@@ -19,8 +19,12 @@ export const Hero = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, ease: 'easeOut' }}
         >
-          <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-8">
+          {/* <div className="inline-flex items-center gap-2 bg-green-100 dark:bg-green-900/30 text-green-800 dark:text-green-300 px-4 py-2 rounded-full text-sm font-medium mb-8">
             <div className="w-2 h-2 bg-green-500 rounded-full animate-pulse" />
+            Ouverte aux opportunités
+          </div> */}
+          <div className="inline-flex items-center gap-2 bg-fuchsia-100 dark:bg-fuchsia-900/30 text-fuchsia-500 dark:text-fuchsia-300 px-4 py-2 rounded-full text-sm font-medium mb-8">
+            <div className="w-2 h-2 bg-fuchsia-500 rounded-full animate-pulse" />
             Ouverte aux opportunités
           </div>
 
@@ -41,7 +45,7 @@ export const Hero = () => {
           >
             <a
               href="https://drive.google.com/file/d/1moYCZjrSwDNyqaAQOQ220yJ-P5nkZCuO/view?usp=sharing"
-              className="relative px-8 py-4 rounded-lg transition-all duration-200 font-medium text-sm bg-purple-300 hover:bg-purple-400 text-slate-900 shadow-sm text-base"
+              className="relative px-8 py-4 rounded-lg transition-all duration-200 font-medium text-sm text-white dark:text-white bg-purple-400 dark:bg-purple-300 hover:bg-purple-400 text-slate-900 shadow-sm text-base"
               target="_blank"
             >
               <span className="relative z-10 flex items-center gap-2">Télécharger Mon CV</span>
@@ -73,7 +77,7 @@ export const Hero = () => {
       ].map((item, index) => (
         <motion.div
           key={index}
-          className="flex flex-wrap max-w-[200px] items-center gap-3 bg-white dark:bg-[#251c3b]/20 hover:bg-white/20 cursor-pointer border border-slate-200 dark:border-slate-700 px-4 py-3 rounded-lg shadow-sm"
+          className="flex flex-wrap max-w-[200px] items-center gap-3 bg-white dark:bg-[#09090b]/80 hover:bg-white/20 cursor-pointer border border-slate-200 dark:border-[#45214d]/30 px-4 py-3 rounded-lg shadow-sm"
           initial={{ opacity: 0, scale: 0.8 }}
           animate={{ opacity: 1, scale: 1 }}
           transition={{ duration: 0.6, delay: 0.5 + index * 0.15 }}
@@ -120,13 +124,13 @@ const AnimatedIcons = () => {
   return (
     <div className=" inset-0 pointer-events-none overflow-hidden z-0">
       <motion.div {...horizontalMotion} className="absolute top-20 left-16">
-        <svg width="60" height="40" viewBox="0 0 60 40" className="text-slate-600 dark:text-purple-400/40">
+        <svg  viewBox="0 0 60 40" className="text-slate-600 dark:text-purple-400/40 size-[40px] sm:size-[50px]">
           <path d="M5 20 L50 5 L35 20 L50 35 L5 20 Z M35 20 L25 30" stroke="currentColor" strokeWidth="1.5" fill="none" strokeLinecap="round" strokeLinejoin="round" />
         </svg>
       </motion.div>
 
       <motion.div {...verticalMotion} className="absolute top-1/2 left-1/4">
-        <svg width="50" height="50" viewBox="0 0 50 50" className="text-slate-600 dark:text-purple-400/40">
+        <svg viewBox="0 0 50 50" className="text-slate-600 dark:text-purple-400/40  size-[40px] sm:size-[55px]">
           <circle cx="25" cy="25" r="3" fill="currentColor" />
           <ellipse cx="25" cy="25" rx="20" ry="8" stroke="currentColor" strokeWidth="1.5" fill="none" transform="rotate(0 25 25)" />
           <ellipse cx="25" cy="25" rx="20" ry="8" stroke="currentColor" strokeWidth="1.5" fill="none" transform="rotate(60 25 25)" />
@@ -135,7 +139,7 @@ const AnimatedIcons = () => {
       </motion.div>
 
       <motion.div {...horizontalMotion} className="absolute top-32 right-20">
-        <svg width="60" height="45" viewBox="0 0 60 45" className="text-slate-600 dark:text-purple-400/40">
+        <svg viewBox="0 0 60 45" className="text-slate-600 dark:text-purple-400/40  size-[40px] sm:size-[55px]">
           <rect x="5" y="5" width="50" height="35" rx="4" stroke="currentColor" strokeWidth="1.5" fill="none" />
           <circle cx="12" cy="15" r="2" fill="currentColor" />
           <circle cx="20" cy="15" r="2" fill="currentColor" />
@@ -145,7 +149,7 @@ const AnimatedIcons = () => {
       </motion.div>
 
       <motion.div {...verticalMotion} className="absolute bottom-32 left-20">
-        <svg width="40" height="55" viewBox="0 0 40 55" className="text-slate-600 dark:text-purple-400/40">
+        <svg viewBox="0 0 40 55" className="text-slate-600 dark:text-purple-400/40  size-[40px] sm:size-[55px]">
           <path d="M20 5 C28 5 35 12 35 20 C35 25 32 29 28 32 L28 40 L12 40 L12 32 C8 29 5 25 5 20 C5 12 12 5 20 5 Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
           <path d="M15 45 L25 45 M17 50 L23 50" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
           <path d="M20 2 L20 8 M32 8 L28 12 M38 20 L32 20 M32 32 L28 28 M8 8 L12 12 M2 20 L8 20 M8 32 L12 28" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
@@ -153,7 +157,7 @@ const AnimatedIcons = () => {
       </motion.div>
 
       <motion.div {...horizontalMotion} className="absolute bottom-40 right-1/4">
-        <svg width="50" height="50" viewBox="0 0 50 50" className="text-slate-600 dark:text-purple-400/40">
+        <svg  viewBox="0 0 50 50" className="text-slate-600 dark:text-purple-400/40  size-[40px] sm:size-[55px]">
           <path d="M25 15 C30 15 35 20 35 25 C35 30 30 35 25 35 C20 35 15 30 15 25 C15 20 20 15 25 15 Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
           <path d="M25 5 L27 12 L23 12 Z M45 25 L38 27 L38 23 Z M25 45 L23 38 L27 38 Z M5 25 L12 23 L12 27 Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
           <path d="M37 13 L32 16 L30 12 Z M37 37 L32 34 L30 38 Z M13 37 L18 34 L20 38 Z M13 13 L18 16 L20 12 Z" stroke="currentColor" strokeWidth="1.5" fill="none" />
@@ -162,7 +166,7 @@ const AnimatedIcons = () => {
 
       {/* Vertical */}
       <motion.div {...verticalMotion} className="absolute top-2/3 right-16">
-        <svg width="45" height="60" viewBox="0 0 45 60" className="text-slate-600 dark:text-purple-400/40">
+        <svg viewBox="0 0 45 60" className="text-slate-600 dark:text-purple-400/40  size-[40px] sm:size-[55px]">
           <ellipse cx="22.5" cy="12" rx="17" ry="7" stroke="currentColor" strokeWidth="1.5" fill="none" />
           <path d="M5.5 12 L5.5 48 C5.5 52 12 55 22.5 55 C33 55 39.5 52 39.5 48 L39.5 12" stroke="currentColor" strokeWidth="1.5" fill="none" />
           <ellipse cx="22.5" cy="25" rx="17" ry="7" stroke="currentColor" strokeWidth="1.5" fill="none" />

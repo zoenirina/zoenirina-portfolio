@@ -6,7 +6,7 @@
 
   /* ta nouvelle animation personnalisée */
   --animate-spin-slow: spin-slow 20s linear infinite;
---animate-marquee: scroll-left 20s linear infinite;
+--animate-marquee: scroll-left 40s linear infinite;
   @keyframes spin-slow {
     from {
       transform: rotate(0deg);
@@ -130,4 +130,12 @@ body{
       background-position: var(--bg-size) 0;
     }
   }
+}
+
+.glass-card {
+    /* background-color: hsl(220 20% 12% / .5);
+    --tw-backdrop-blur: blur(16px);
+    backdrop-filter: blur(16px) ;
+    border-width: 1px;
+    border-color: hsl(220 15% 25% / .5); */
 }

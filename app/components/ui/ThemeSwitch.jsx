@@ -40,7 +40,7 @@ const toggleTheme = () => {
 
   return (
     <motion.button
-      className="relative w-10 h-10 rounded-lg bg-white dark:bg-purple-300 border border-slate-200 dark:border-purple-300 flex items-center justify-center shadow-sm"
+      className="relative cursor-pointer w-9 h-9 rounded-full bg-white dark:bg-purple-300 border border-slate-200 dark:border-purple-300 flex items-center justify-center shadow-sm"
       aria-label="Toggle theme"
       tabIndex={0}
       onClick={toggleTheme}

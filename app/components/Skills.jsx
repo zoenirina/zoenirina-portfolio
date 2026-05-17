@@ -36,8 +36,8 @@ export const Skills = () => {
         >
         </svg>
 
-        <h1 className="
-          text-4xl lg:text-5xl font-bold mb-4
+        <h1 className=" text-3xl
+          sm:text-4xl lg:text-5xl font-bold mb-4
           text-gray-800 dark:text-gray-100
         ">
          Technologies au service de mes solutions
@@ -53,23 +53,18 @@ export const Skills = () => {
       </div>
 
       <div className="relative w-full max-w-xl lg:max-w-7xl py-8 flex justify-center items-center mb-24 mt-32">
-    
-
-<SkillsPyramid></SkillsPyramid>
-
-  
-
-       
+      <SkillsPyramid/>       
       </div>
- <CustomMarquee>
+        <CustomMarquee>
           {skillsData.map((skill, id) => (
             <CameraLensIcon key={id}>
               <div className="flex flex-col items-center justify-center gap-3 h-full">
                 <div className="
-                  p-3 size-24 flex items-center justify-center rounded-md shadow-md border
+                  p-2 sm:p-3 size-16 sm:size-24 flex items-center justify-center rounded-md shadow-md border
                   bg-white/60 backdrop-blur-md border-gray-200
                   dark:bg-white/10 dark:border-gray-500/30
                 ">
+                  <div className="relative w-full h-full">
                   <Image
                     src={skillsImage(skill)}
                     alt={skill}
@@ -77,6 +72,7 @@ export const Skills = () => {
                     height={36}
                     className="h-full w-auto rounded-lg"
                   />
+                  </div>
                 </div>
               </div>
             </CameraLensIcon>
@@ -99,32 +95,33 @@ const SkillsPyramid = () => {
           const rowItems = skillsData.slice(start, start + rowSize);
 
           rows.push(
-            <div key={start} className="flex justify-center gap-2 flex-wrap">
+            <div key={start} className="flex justify-center gap-4 flex-wrap">
               {rowItems.map((skill, id) => (
                 <motion.div
                   key={id}
                   initial={{ opacity: 0, y: 20 }}
                   whileInView={{ opacity: 1, y: 0 }}
                   viewport={{ once: true }}
-                  transition={{ duration: 0.6, delay: (start + id) * 0.05 }}
+                  transition={{ duration: 1.5, delay: (start + id) * 0.05 }}
                 >
                   <CameraLensIcon>
                   <div className="flex flex-col items-center justify-center gap-3 h-full">
                     <div
-                      className="
-                        p-3 w-24 h-24 flex items-center justify-center rounded-md shadow-md border
+                      className=" 
+                        p-2 sm:p-3 size-16 sm:size-24 flex items-center justify-center rounded-md shadow-md border
                         bg-white/60 backdrop-blur-md border-gray-200
                         dark:bg-white/10 dark:border-gray-500/30
                         hover:scale-105 transition-transform duration-200
                       "
                     >
-                      <img
-                        src={skillsImage(skill)?.src}
-                        alt={skill}
-                        width={36}
-                        height={36}
-                        className="h-full w-auto rounded-lg"
-                      />
+                      <div className="relative w-full h-full">
+                        <Image
+                            src={skillsImage(skill)}
+                            alt={skill}
+                            fill
+                            className="rounded-lg object-contain "
+                          />
+                      </div>                      
                     </div>
                   </div>
                 </CameraLensIcon>
@@ -213,7 +210,7 @@ function CustomMarquee({ children, speed = 30 }) {
   return (
     <div className="overflow-hidden whitespace-nowrap w-full py-2">
       <div
-        className="inline-flex animate-marquee"
+        className="inline-flex gap-x-8 animate-marquee"
       >
         {children}
         {children}

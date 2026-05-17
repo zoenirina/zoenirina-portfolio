@@ -7,52 +7,52 @@ import { workData } from '../data/WorkData';
 import MarketCard from './card/MarketCard';
 import SeparatorLine from './ui/SeparatorLine';
 
-const projects = [
-  {
-    id: '01',
-    year: '2025',
-    title: 'TATITRA',
-    description:
-      'Application mobile de gestion de flotte (véhicules, chauffeurs, dépenses, activités, rappels). Permet la gestion des véhicules et chauffeurs, le suivi des dépenses et versements ainsi que l’historique des activités.',
-    tech: ['React Native', 'Spring Boot', 'Docker', 'Tailwind CSS'],
-    image: 'podcast.png', ///tatitra.jpg',
-    live: '',
-    code: '',
-  },
-  {
-    id: '02',
-    year: '2024',
-    title: 'MIRA – Plateforme Carrière & Formation',
-    description:
-      'Plateforme de carrière et formation pour les jeunes Malagasy. Fonctionnalités : gestion des CVs, dépôt et mise à jour, recherche et sauvegarde d’offres, gestion des formations et des participants, publication et suivi des offres d’emploi, supervision par un administrateur.',
-    tech: ['ReactJS', 'Laravel', 'Tailwind CSS'],
-    image: 'podcast.png', ///mira.jpg',
-    live: '',
-    code: '',
-  },
-  {
-    id: '03',
-    year: '2024',
-    title: 'SORO Rendez-Vous',
-    description:
-      'Système de gestion de rendez-vous et de réservations avec calendrier intelligent et optimisation tarifaire. Permet la prise de rendez-vous, la gestion des réservations et la planification.',
-    tech: ['ReactJS', 'Laravel', 'Material UI'],
-    image: 'podcast02.png', ///soro.jpg',
-    live: '',
-    code: '',
-  },
-  {
-    id: '04',
-    year: '2023',
-    title: 'DAO Management – Ministère de l’Économie et des Finances',
-    description:
-      'Application web de contrôle et de validation des Dossiers d’Appel d’Offre (DAO).',
-    tech: ['AngularJS', 'Laravel', 'Tailwind CSS'],
-    image: 'podcast.png', ///dao.jpg',
-    live: '',
-    code: '',
-  },
-];
+// const projects = [
+//   {
+//     id: '01',
+//     year: '2025',
+//     title: 'TATITRA',
+//     description:
+//       'Application mobile de gestion de flotte (véhicules, chauffeurs, dépenses, activités, rappels). Permet la gestion des véhicules et chauffeurs, le suivi des dépenses et versements ainsi que l’historique des activités.',
+//     tech: ['React Native', 'Spring Boot', 'Docker', 'Tailwind CSS'],
+//     image: 'podcast.png', ///tatitra.jpg',
+//     live: '',
+//     code: '',
+//   },
+//   {
+//     id: '02',
+//     year: '2024',
+//     title: 'MIRA – Plateforme Carrière & Formation',
+//     description:
+//       'Plateforme de carrière et formation pour les jeunes Malagasy. Fonctionnalités : gestion des CVs, dépôt et mise à jour, recherche et sauvegarde d’offres, gestion des formations et des participants, publication et suivi des offres d’emploi, supervision par un administrateur.',
+//     tech: ['ReactJS', 'Laravel', 'Tailwind CSS'],
+//     image: 'podcast.png', ///mira.jpg',
+//     live: '',
+//     code: '',
+//   },
+//   {
+//     id: '03',
+//     year: '2024',
+//     title: 'SORO Rendez-Vous',
+//     description:
+//       'Système de gestion de rendez-vous et de réservations avec calendrier intelligent et optimisation tarifaire. Permet la prise de rendez-vous, la gestion des réservations et la planification.',
+//     tech: ['ReactJS', 'Laravel', 'Material UI'],
+//     image: 'podcast02.png', ///soro.jpg',
+//     live: '',
+//     code: '',
+//   },
+//   {
+//     id: '04',
+//     year: '2023',
+//     title: 'DAO Management – Ministère de l’Économie et des Finances',
+//     description:
+//       'Application web de contrôle et de validation des Dossiers d’Appel d’Offre (DAO).',
+//     tech: ['AngularJS', 'Laravel', 'Tailwind CSS'],
+//     image: 'podcast.png', ///dao.jpg',
+//     live: '',
+//     code: '',
+//   },
+// ];
 
 
 const Work = () => {

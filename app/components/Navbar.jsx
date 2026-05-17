@@ -100,7 +100,117 @@ const Navbar = () => {
 
   return (
     <>
-      <nav
+     <nav
+  className="
+    fixed top-0 left-0 right-0 z-50 sm:mt-4
+    w-full md:w-[80%]
+    md:mx-auto md:rounded-full bg-slate-50/95 dark:bg-[#09090b]/80 backdrop-blur-sm dark:backdrop-blur-lg
+    glass-card transition-all duration-300  border backgroung-blur-sm border-b border-slate-200 dark:border-[#45214d]/30 shadow-2xl shadow-fuchsia-400/5
+  shadow-[0_-32px_30px_-10px_rgba(13,0,10,0.95)]
+    "
+  style={{ transform: "none"  }}
+>
+  <div className="container mx-auto px-4 sm:px-6 lg:px-8">
+    <div className="flex items-center justify-between h-16">
+      
+      <div className="text-2xl font-bold flex flex-row items-center gap-1 ">
+        <span className="text-fuchsia-500">Z. </span>
+        <span className="text-gray-900 dark:text-white hidden sm:block">Marie Viviane</span>
+        <span className="text-gray-900 dark:text-white block sm:hidden">MV</span>
+        {/* <span className="text-white block sm:hidden">MV</span> */}
+      </div>
+        <ul className="hidden md:flex items-center gap-8">
+ {navItems.map((label, i) => (
+                <motion.li
+                  key={label}
+                  initial="initial"
+                  animate="animate"
+                  transition={{ duration: 0.4, delay: 0.1 * i }}
+                  variants={fadeInUp}
+                >
+                  <button
+                    onClick={() => handleNavClick(label)}
+                    className=" text-sm tracking-wide transition-colors decoration-0 cursor-pointer font-medium text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-slate-100"
+                    data-magnetic="true"
+                  >
+                    {label}
+                  </button>
+                </motion.li>
+              ))}
+            <ThemeSwitch />
+          </ul>
+
+      <button
+        className="md:hidden text-foreground relative w-10 h-10 flex items-center justify-center"
+        aria-label="Toggle menu"
+        onClick={toggleMenu}
+      >
+        <div style={{ transform: "none" }}>
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="24"
+            height="24"
+            viewBox="0 0 24 24"
+            fill="none"
+            stroke="currentColor"
+            strokeWidth="2"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+            className="lucide lucide-menu"
+          >
+            <line x1="4" x2="20" y1="12" y2="12" />
+            <line x1="4" x2="20" y1="6" y2="6" />
+            <line x1="4" x2="20" y1="18" y2="18" />
+          </svg>
+        </div>
+      </button>
+
+      <AnimatePresence>
+        {isMenuOpen && (
+          <>
+            <motion.div
+              initial={{ opacity: 0 }}
+              animate={{ opacity: 1 }}
+              exit={{ opacity: 0 }}
+              transition={{ duration: 0.3 }}
+              className="fixed inset-0 bg-black/20 dark:bg-black/40 backdrop-blur-sm z-30 md:hidden"
+              onClick={() => setIsMenuOpen(false)}
+            />
+
+            <motion.div
+              variants={mobileMenuVariants}
+              initial="closed"
+              animate="open"
+              exit="closed"
+              className="fixed top-[73px] left-4 right-4 bg-white/95 dark:bg-[#09090b]/95 backdrop-blur-lg border border-slate-200 dark:border-[#45214d]/30 rounded-lg shadow-xl z-30 md:hidden"
+            >
+              <div className="p-6">
+                <motion.ul className="space-y-4">
+                  {navItems.map((label, i) => (
+                    <motion.li
+                      key={label}
+                      variants={mobileMenuItemVariants}
+                    >
+                      <button
+                        onClick={() => handleNavClick(label)}
+                        className="block w-full text-left py-3 px-4 text-base font-medium text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-slate-100 hover:bg-slate-100 dark:hover:bg-slate-800/50 rounded-lg transition-all duration-200"
+                      >
+                        {label}
+                      </button>
+                    </motion.li>
+                  ))}
+                </motion.ul>
+              </div>
+            </motion.div>
+          </>
+        )}
+      </AnimatePresence>
+
+    </div>
+  </div>
+</nav>
+
+      {/* <nav
         className="fixed top-0 left-0 right-0 z-40 bg-slate-50/95 dark:bg-[#09090b]/80 backdrop-blur-sm dark:backdrop-blur-lg border-b border-slate-200 dark:border-[#45214d]/30"
         aria-label="Navigation principale"
       >
@@ -110,13 +220,11 @@ const Navbar = () => {
               <span className="text-fuchsia-500">Z. </span>
               <span className="text-white">Marie Viviane</span>
             </div>
-            {/* <h1 className="text-lg font-bold text-slate-900 dark:text-slate-100 boujee-text">
-              Bonjour !
-            </h1> */}
+           
           </motion.div>
 
           <div className="flex items-center gap-x-4">
-            {/* Menu desktop */}
+          
             <ul className="hidden md:flex space-x-6 md:space-x-12">
               {navItems.map((label, i) => (
                 <motion.li
@@ -137,12 +245,10 @@ const Navbar = () => {
               ))}
             </ul>
 
-            {/* Theme Switch */}
             <motion.div {...fadeInRight}>
               <ThemeSwitch />
             </motion.div>
 
-            {/* Hamburger Menu Button */}
             <motion.button
               onClick={toggleMenu}
               className="md:hidden p-2 text-slate-600 dark:text-gray-300 hover:text-slate-900 dark:hover:text-slate-100 transition-colors"
@@ -187,18 +293,14 @@ const Navbar = () => {
           </div>
         </div>
 
-        {/* Barre de progression */}
         <motion.div
           className="h-[1px] dark:block hidden bg-gradient-to-r from-[#45214d]/30 via-purple-400/40 to-[#45214d]/40 origin-left"
           style={{ scaleX }}
         />
       </nav>
-
-      {/* Menu Mobile Overlay */}
       <AnimatePresence>
         {isMenuOpen && (
           <>
-            {/* Backdrop */}
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -208,7 +310,6 @@ const Navbar = () => {
               onClick={() => setIsMenuOpen(false)}
             />
 
-            {/* Menu Mobile */}
             <motion.div
               variants={mobileMenuVariants}
               initial="closed"
@@ -236,7 +337,9 @@ const Navbar = () => {
             </motion.div>
           </>
         )}
-      </AnimatePresence>
+      </AnimatePresence> */}
+
+
     </>
   );
 };

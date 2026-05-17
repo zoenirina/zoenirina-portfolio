@@ -1,7 +1,7 @@
 // pages/index.js
 "use client"
 import Head from 'next/head';
-import ContentFrame from './ui/ContentFrame';
+import { motion } from 'framer-motion';
 import { servicesData } from '../data/servicesData';
 import ServiceCard from './ui/ServiceCard';
 import SeparatorLine from './ui/SeparatorLine';
@@ -22,34 +22,34 @@ export default function Service() {
  function ServicesSection() {
   return (
     <div className=" min-h-screen" id="services">
-
- <div
-  className="mx-auto max-w-7xl relative flex flex-col items-center justify-center text-center overflow-visible"
->
-  <h3 className="text-4xl md:text-5xl leading-normal font-bold mb-3 text-gray-900 dark:text-white">
-    Ce que je peux vous offrir
-  </h3>
-
-<SeparatorLine />
-
-  <p className="mt-6 text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
-   Des solutions personnalisées en développement web, design et intégration, pour transformer vos idées en projets concrets et performants.
-  </p>
-</div>
-
-    <div className="md:mt-8 mt-6 grid grid-cols-1  gap-2 md:gap-4 md:grid-col-2 lg:grid-cols-3 p-0 md:p-8 space-y-8 lg:space-y-0 lg:space-x-8">
-
-          {servicesData.map((service, index) => (
-            <ServiceCard
-              key={index}
-              icon={service.icon}
-              slogan={service.slogan}
-              title={service.title}
-              description={service.description}
-            />
-          ))}
-      
-    </div>
+      <div className="mx-auto max-w-7xl relative flex flex-col items-center justify-center text-center overflow-visible" >
+        <h3 className="text-3xl sm:text-4xl md:text-5xl leading-normal font-bold mb-3 text-gray-900 dark:text-white">
+          Ce que je peux vous offrir
+        </h3>
+        <SeparatorLine />
+        <p className="mt-6 text-base md:text-lg text-gray-600 dark:text-gray-300 max-w-2xl mx-auto">
+          Des solutions personnalisées en développement web, design et intégration, pour transformer vos idées en projets concrets et performants.
+        </p>
+      </div>
+      <div className="md:mt-8 mt-6 grid grid-cols-1  gap-2 md:gap-4 sm:grid-cols-2 lg:grid-cols-3 p-0 md:p-8 ">
+            {servicesData.map((service, index) => (
+              <motion.div
+                key={index}
+                initial={{ opacity: 0, y: 30 }}
+                whileInView={{ opacity: 1, y: 0 }}
+                viewport={{ once: true, amount: 0.3 }}
+                transition={{ duration: 0.55, ease: 'easeOut', delay: index * 0.08 }}
+              >
+                <ServiceCard
+                  icon={service.icon}
+                  slogan={service.slogan}
+                  title={service.title}
+                  description={service.description}
+                />
+              </motion.div>
+            ))}
+        
+      </div>
  
 </div>
     
