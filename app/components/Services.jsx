@@ -31,7 +31,7 @@ export default function Service() {
           Des solutions personnalisées en développement web, design et intégration, pour transformer vos idées en projets concrets et performants.
         </p>
       </div>
-      <div className="md:mt-8 mt-6 grid grid-cols-1  gap-2 md:gap-4 sm:grid-cols-2 lg:grid-cols-3 p-0 md:p-8 ">
+      <div className="md:mt-8 mt-6 grid grid-cols-1 gap-y-4  gap-2 md:gap-4 sm:grid-cols-2 lg:grid-cols-3 p-0 md:p-8 ">
             {servicesData.map((service, index) => (
               <motion.div
                 key={index}

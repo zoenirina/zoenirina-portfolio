@@ -100,16 +100,18 @@ const Navbar = () => {
 
   return (
     <>
-     <nav
+<nav
   className="
     fixed top-0 left-0 right-0 z-50 sm:mt-4
     w-full md:w-[80%]
     md:mx-auto md:rounded-full bg-slate-50/95 dark:bg-[#09090b]/80 backdrop-blur-sm dark:backdrop-blur-lg
-    glass-card transition-all duration-300  border backgroung-blur-sm border-b border-slate-200 dark:border-[#45214d]/30 shadow-2xl shadow-fuchsia-400/5
-  shadow-[0_-32px_30px_-10px_rgba(13,0,10,0.95)]
-    "
-  style={{ transform: "none"  }}
+    glass-card transition-all duration-300 border backgroung-blur-sm border-b border-slate-200 dark:border-[#45214d]/30
+   dark:shadow-[0_-32px_30px_-10px_rgba(13,0,10,0.95)]
+    shadow-[0_-32px_30px_-10px_rgba(250,250,255,0.25)]
+  "
 >
+
+
   <div className="container mx-auto px-4 sm:px-6 lg:px-8">
     <div className="flex items-center justify-between h-16">
       

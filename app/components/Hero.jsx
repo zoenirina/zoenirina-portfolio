@@ -31,7 +31,7 @@ export const Hero = () => {
           <h1 className="text-5xl tracking-wide md:text-7xl font-bold leading-tight mb-6 text-slate-900 dark:text-slate-100">
             ZOENIRINA Marie Viviane           
           </h1>
-           <h2 className="text-3xl mb-6 font-bold leading-tight uppercase">
+           <h2 className="text-2xl sm:text-3xl mb-6 font-light leading-tight uppercase">
             Développeuse Fullstack
             </h2>
           <p className="text-xl text-slate-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed">

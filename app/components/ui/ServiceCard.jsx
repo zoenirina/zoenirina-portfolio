@@ -4,7 +4,7 @@ export default function ServiceCard({ icon, slogan, title, description }) {
   return (
     <div
       className="
-        relative cursor-pointer w-full
+        relative cursor-pointer w-full h-full
         bg-white/5 backdrop-blur-sm filter text-gray-900 border border-gray-300
         rounded-lg shadow-xl p-8
         transition-colors duration-300
