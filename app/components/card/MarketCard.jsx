@@ -18,45 +18,75 @@ const MarketCard = ({
     <div className={`sticky flex flex-col lg:flex-row min-h-[600px] rounded-sm border border-gray-300 dark:border-fuchsia-900/20 overflow-hidden`}
     style={{ top: `${stickyValue}rem` }}
     >
-      <div className="relative  flex-1  p-8 flex flex-col items-center justify-center text-white lg:w-1/2 object-cover bg-cover "
-      onClick={() => {
-        if (image && image.length > 0) {
-          // Open modal with the first image
-          setIsOpenModal(image[0]);
+     <div
+  className="relative flex-1 p-8 flex flex-col items-center justify-center text-white lg:w-1/2 object-cover bg-cover overflow-hidden"
+  onClick={() => {
+    if (image && image.length > 0) {
+      setIsOpenModal(image[0]);
+    }
+  }}
+  style={
+    image && image.length > 0
+      ? {
+          backgroundImage: `url('${image[0]}')`,
         }
-      }}
-      style={
-        image && image.length > 0
-            ? {
-                    backgroundImage: `linear-gradient(to top, #0f0d1a7a 0%, #0f0d1a7a 90%, transparent 125%), url('${image[0]}')`,
-                }
-            : undefined
-        }
-      >
-        {/* Grid dots */}
-        <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-0 opacity-80 mx-[16px] sm:mx-[28px] my-2.5 sm:my-12">
-          <div className="flex justify-start items-start p-4">
-            <div className="w-3 h-3 bg-white outline-4 outline-white/40 rounded-full"></div>
-          </div>
-          <div className="flex justify-end items-start p-4">
-            <div className="w-3 h-3 bg-white outline-4 outline-white/40 rounded-full"></div>
-          </div>
-          <div className="flex justify-start items-end p-4">
-            <div className="w-3 h-3 bg-white outline-4 outline-white/40 rounded-full"></div>
-          </div>
-          <div className="flex justify-end items-end p-4">
-            <div className="w-3 h-3 bg-white outline-4 outline-white/40 rounded-full"></div>
-          </div>
-        </div>
+      : undefined
+  }
+>
+  {/* Overlay light / dark */}
+  <div className="absolute inset-0 bg-white/10 dark:bg-[#0f0d1a7a] z-0" />
 
-        <div className="absolute top-[12%] left-0 w-full h-0.5 bg-white opacity-30 z-0" style={{ borderTop: '2px dashed currentColor', transform: 'translateY(-50%)' }}></div>
-        <div className="absolute bottom-[12%] left-0 w-full h-0.5 bg-white opacity-30 z-0" style={{ borderTop: '2px dashed currentColor', transform: 'translateY(-50%)' }}></div>
+  {/* Grid dots */}
+  <div className="absolute inset-0 grid grid-cols-2 grid-rows-2 gap-0 opacity-80 mx-[16px] sm:mx-[28px] my-2.5 sm:my-12 z-10">
+    <div className="flex justify-start items-start p-4">
+      <div className="w-3 h-3 bg-white outline-4 outline-white/40 rounded-full"></div>
+    </div>
+    <div className="flex justify-end items-start p-4">
+      <div className="w-3 h-3 bg-white outline-4 outline-white/40 rounded-full"></div>
+    </div>
+    <div className="flex justify-start items-end p-4">
+      <div className="w-3 h-3 bg-white outline-4 outline-white/40 rounded-full"></div>
+    </div>
+    <div className="flex justify-end items-end p-4">
+      <div className="w-3 h-3 bg-white outline-4 outline-white/40 rounded-full"></div>
+    </div>
+  </div>
 
-        {/* Vertical Dashed Lines */}
-        {/* <div className="absolute left-1/2 top-0 h-full w-0.5 bg-white opacity-30 z-0" style={{ borderLeft: '2px dashed currentColor', transform: 'translateX(-50%)' }}></div> */}
-        <div className="absolute left-[8%] top-0 h-full w-0.5 bg-white opacity-30 z-0" style={{ borderLeft: '2px dashed currentColor', transform: 'translateX(-50%)' }}></div>
-        <div className="absolute right-[8%] top-0 h-full w-0.5 bg-white opacity-30 z-0" style={{ borderLeft: '2px dashed currentColor', transform: 'translateX(-50%)' }}></div>
-      </div>
+  {/* Horizontal dashed lines */}
+  <div
+    className="absolute top-[12%] left-0 w-full h-0.5 text-white opacity-30 z-10"
+    style={{
+      borderTop: "2px dashed currentColor",
+      transform: "translateY(-50%)",
+    }}
+  />
+
+  <div
+    className="absolute bottom-[12%] left-0 w-full h-0.5 text-white opacity-30 z-10"
+    style={{
+      borderTop: "2px dashed currentColor",
+      transform: "translateY(-50%)",
+    }}
+  />
+
+  {/* Vertical dashed lines */}
+  <div
+    className="absolute left-[8%] top-0 h-full w-0.5 text-white opacity-30 z-10"
+    style={{
+      borderLeft: "2px dashed currentColor",
+      transform: "translateX(-50%)",
+    }}
+  />
+
+  <div
+    className="absolute right-[8%] top-0 h-full w-0.5 text-white opacity-30 z-10"
+    style={{
+      borderLeft: "2px dashed currentColor",
+      transform: "translateX(-50%)",
+    }}
+  />
+</div>
+
       <div className="flex-1 bg-white/70 dark:bg-[#09090b]/90 backdrop-blur-sm p-8 lg:p-16 flex flex-col justify-center text-white lg:w-1/2">
 <span 
   className="font-sans text-5xl font-bold absolute right-4 top-4 
@@ -67,7 +97,7 @@ const MarketCard = ({
   }}
 >
   <span className="text-lg font-medium"></span>
-  <span className="text-4xl font-bold ml-2">0{id}</span>
+  <span className="text-4xl font-bold ml-2 text-[#331B32]">0{id}</span>
 </span>
 
         <div className="absolute top-[12%] left-0 w-full h-0.5 bg-gray-300 dark:bg-white/10 opacity-30 z-0" style={{  transform: 'translateY(-50%)' }}></div>
