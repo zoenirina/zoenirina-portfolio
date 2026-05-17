@@ -28,7 +28,7 @@ export const Hero = () => {
             Ouverte aux opportunités
           </div>
 
-          <h1 className="text-5xl md:text-7xl font-bold leading-tight mb-6 text-slate-900 dark:text-slate-100">
+          <h1 className="text-5xl tracking-wide md:text-7xl font-bold leading-tight mb-6 text-slate-900 dark:text-slate-100">
             ZOENIRINA Marie Viviane           
           </h1>
            <h2 className="text-3xl mb-6 font-bold leading-tight uppercase">
