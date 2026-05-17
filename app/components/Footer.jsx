@@ -79,7 +79,7 @@ const Footer = () => {
       </div>
     </div>
     <div className="relative overflow-hidden  text-center">
-      <h1 className="-mb-6 sm:mb-[-40px] lg:-mb-16 text-[80px] sm:text-[115px] md:text-[130px] lg:text-[180px] xl:text-[225px] uppercase text-[#c4c4c4] dark:text-fuchsia-200 leading-none break-words">
+      <h1 className="-mb-6 sm:mb-[-40px] lg:-mb-16 text-[80px] sm:text-[115px] md:text-[130px] lg:text-[180px] xl:text-[225px] uppercase text-[#e6e6e6] dark:text-fuchsia-200 leading-none break-words">
         Portfolio
       </h1>
     </div>
