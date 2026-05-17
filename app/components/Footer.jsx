@@ -13,7 +13,7 @@ const Footer = () => {
   return (
  <footer className="py-12 relative z-20  ">
   <div className="container mx-auto px-4 md:px-6 ">
-    <div className="grid md:grid-cols-3 gap-8 mb-8">
+    <div className="grid md:grid-cols-3 gap-8 mb-6">
       {/* Bloc identité */}
       <div>
         <div className="text-2xl font-bold mb-4">
@@ -78,7 +78,14 @@ const Footer = () => {
         </div>
       </div>
     </div>
-    <div className="pt-8 border-t border-gray-200 dark:border-gray-700">
+    <div className="relative overflow-hidden  text-center">
+      <h1 className="-mb-6 sm:mb-[-40px] lg:-mb-16 text-[80px] sm:text-[115px] md:text-[130px] lg:text-[180px] xl:text-[225px] uppercase text-[#c4c4c4] dark:text-fuchsia-200 leading-none break-words">
+        Portfolio
+      </h1>
+    </div>
+
+
+    <div className="pt-8 border-t border-gray-300 dark:border-gray-700">
       <div className="flex flex-col md:flex-row justify-between items-center gap-4">
         <p className="text-sm text-gray-600 dark:text-gray-400">© 2025 Zoenirina Marie Viviane. Tous droits réservés.</p>
         <div className="flex items-center gap-1 text-sm">
