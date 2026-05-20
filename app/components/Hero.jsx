@@ -44,7 +44,7 @@ export const Hero = () => {
             transition={{ duration: 0.8, ease: 'easeOut', delay: 0.2 }}
           >
             <a
-              href="https://drive.google.com/file/d/13hOxbTZfF_ZBwW0-koYqtDHW9qu-82Iu/view?usp=sharing"
+              href="https://drive.google.com/file/d/18Lu_MQiRDmAX3QBiKYSFN_H0PLm5O6Hs/view?usp=sharing"
               className="relative px-8 py-4 rounded-lg transition-all duration-200 font-medium text-sm text-white dark:text-white bg-purple-400 dark:bg-purple-300 hover:bg-purple-400 text-slate-900 shadow-sm text-base"
               target="_blank"
             >
